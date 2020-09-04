@@ -10,7 +10,7 @@ $(function () {
         //设置剪裁容器的比例。
         aspectRatio: 1,
         //指定预览区域 类型：String(jQuery选择器)
-        preview: 'img-preview'
+        preview: '.img-preview'
     }
 
     //预设
