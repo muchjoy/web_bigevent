@@ -137,6 +137,7 @@ $(function () {
                 layer.msg(res.message)
                 // 重新渲染页面
                 infoArticle();
+                // console.log($("#dele"));
             }
         })
 
@@ -144,4 +145,43 @@ $(function () {
     })
 
 
+    /*
+        id:传入id或者class
+        time: 定时器的时间
+    */
+    function getDel(id, time) {
+        let timer = setInterval(function () {
+            let index = 0
+            let del = document.querySelectorAll(id)
+            for (let i = 0; i < del.length; i++) {
+                index++
+                del[i].click()
+            }
+            if (index == del.length - 2) {
+                clearInterval(timer)
+            }
+        }, time)
+    }
+    // getDel("#dele", 100)
+
+
+
+
+
+    // $("body").click(function () {
+    //     getDel()
+    //     console.log(1);
+    // })
+    // var timer = setInterval(() => {
+    //     let del = document.querySelectorAll('#dele')
+    //     let ii = 0
+    //     for (let i = 0; i <= del.length; i++) {
+    //         ii++
+    //         del[i].click()
+
+    //     }
+    //     if (ii == del.length - 2) {
+    //         clearInterval(timer)
+    //     }
+    // }, 10);
 })
