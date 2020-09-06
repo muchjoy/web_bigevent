@@ -1,4 +1,4 @@
-$(function () {
+
     // 调用 layer.msg() 提示消息
     let layer = layui.layer
 
@@ -74,4 +74,3 @@ $(function () {
 
 
 
-})

@@ -36,8 +36,9 @@ $(function () {
             data: $(this).serialize(),
             success: function (res) {
                 if (res.status !== 0) return layer.msg(res.message);
-                // console.log(res);
+                console.log(res);
                 layer.msg(res.message)
+                $(".layui-form")[0].reset()
             }
         })
     })
