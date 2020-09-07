@@ -2,51 +2,51 @@
 <html lang="zh-CN">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css" />
-    <link rel="stylesheet" href="/assets/css/article/art_cate.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="/assets/lib/layui/css/layui.css" />
+  <link rel="stylesheet" href="/assets/css/article/art_cate.css" />
 </head>
 
 <body>
-    <!-- 卡片区域 -->
-    <div class="layui-card">
-        <div class="layui-card-header">
-            <span>文章类别管理</span>
-            <button type="button" class="layui-btn layui-btn-normal layui-btn-sm" id="btnAddCate">添加类别</button>
-        </div>
-        <div class=" layui-card-body">
-            <table class="layui-table">
-                <colgroup>
-                    <col />
-                    <col />
-                    <col width="200" />
-                </colgroup>
-                <thead>
-                    <tr>
-                        <th>分类名称</th>
-                        <th>分类别名</th>
-                        <th>操作</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>贤心</td>
-                        <td>2016-11-29</td>
-                        <td>人生就像是一场修行</td>
-                    </tr>
-                    <tr>
-                        <td>许闲心</td>
-                        <td>2016-11-28</td>
-                        <td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+  <!-- 卡片区域 -->
+  <div class="layui-card">
+    <div class="layui-card-header">
+      <span>文章类别管理</span>
+      <button type="button" class="layui-btn layui-btn-normal layui-btn-sm" id="btnAddCate">添加类别</button>
     </div>
-    <!-- 弹出层 -->
-    <script type="text/html" id="dialog-add">
+    <div class=" layui-card-body">
+      <table class="layui-table">
+        <colgroup>
+          <col />
+          <col />
+          <col width="200" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th>分类名称</th>
+            <th>分类别名</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>贤心</td>
+            <td>2016-11-29</td>
+            <td>人生就像是一场修行</td>
+          </tr>
+          <tr>
+            <td>许闲心</td>
+            <td>2016-11-28</td>
+            <td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- 弹出层 -->
+  <script type="text/html" id="dialog-add">
         <form class="layui-form" id="form-add">
           <div class="layui-form-item">
             <label class="layui-form-label">分类名称</label>
@@ -69,8 +69,8 @@
         </form>
       </script>
 
-    <!-- 修改弹层 -->
-    <script type="text/html" id="dialog-edit">
+  <!-- 修改弹层 -->
+  <script type="text/html" id="dialog-edit">
         <form class="layui-form" id="form-edit" lay-filter="form-edit">
           <!-- 隐藏域，保存 Id 的值 -->
           <input type="hidden" name="Id">
@@ -94,8 +94,8 @@
         </form>
       </script>
 
-    <!-- 模板引擎 -->
-    <script type="text/html" id="tpl-table">
+  <!-- 模板引擎 -->
+  <script type="text/html" id="tpl-table">
         {{each data}}
         <tr>
           <td>{{$value.name}}</td>
@@ -112,6 +112,7 @@
 <script src="/assets/js/baseAPI.js"></script>
 <script src="/assets/lib/layui/layui.all.js"></script>
 <script src="/assets/lib/template-web.js"></script>
+<script src="/assets/js/delete.js"></script>
 <script src="/assets/js/article/art_cate.js"></script>
 
 </html>

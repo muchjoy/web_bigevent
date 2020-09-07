@@ -125,7 +125,7 @@ $(function () {
 
     //根据id点击删除文章分类
     $("body").on("click", '.btn-delete', function () {
-
+        // console.log(this);
         $.ajax({
             type: 'get',
             url: "/my/article/deletecate/" + $(this).attr("data-id"),
@@ -149,24 +149,32 @@ $(function () {
         id:传入id或者class
         time: 定时器的时间
     */
-    function getDel(id, time) {
-        let timer = setInterval(function () {
-            let index = 0
-            let del = document.querySelectorAll(id)
-            for (let i = 0; i < del.length; i++) {
-                index++
-                del[i].click()
-            }
-            if (index == del.length - 2) {
-                clearInterval(timer)
-            }
-        }, time)
-    }
+    // function getDel(id, time) {
+    //     let timer = setInterval(function () {
+    //         let index = 0
+    //         let del = document.querySelectorAll(id)
+
+    //         for (let i = 0; i < del.length; i++) {
+    //             index++
+    //             del[i].click()
+    //         }
+    //         if (index === 2) {
+    //             clearInterval(timer)
+    //         }
+    //     }, time)
+    // }
     // getDel("#dele", 100)
 
 
 
-
+    function addList() {
+        setInterval(function () {
+            $("#btnAddCate").click()
+            // $(".layui-input").val('11111')
+            $('#form-add').submit()
+        }, 1000)
+    }
+    // addList()
 
     // $("body").click(function () {
     //     getDel()
