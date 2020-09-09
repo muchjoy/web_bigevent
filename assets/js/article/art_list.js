@@ -64,7 +64,8 @@ $(function () {
     $("tbody").on("click", '.btn-delete', function () {
         //获取id值
         let id = $(this).attr('data-id')
-
+        //获取删除的长度
+        let len = $(".btn-delete").length;
         layer.confirm('确认删除?', { icon: 3, title: '提示' }, function (index) {
 
             $.ajax({
@@ -78,6 +79,10 @@ $(function () {
                     if (res.status !== 0) return layer.msg("删除文章失败")
                     layer.msg(res.message);
 
+                    //判断
+                    if (len === 1) [
+                        pagenum = pagenum === 1 ? 1 : pagenum - 1
+                    ]
                     infoList()
 
                 }

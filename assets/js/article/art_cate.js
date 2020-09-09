@@ -163,7 +163,7 @@ $(function () {
     //         }
     //     }, time)
     // }
-    // getDel("#dele", 100)
+    // getDel("#dele", 10)
 
 
 
